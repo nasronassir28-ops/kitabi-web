@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0F766E">
+<title>كتابي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-icon" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.5-2 10-.5V19c-2.5-1.5-6-1.5-10 .5-4-2-7.5-2-10-.5z"/><path d="M12 6v13.5"/></svg>
+    </div>
+    <h1>كتابي</h1>
+  </div>
+  <p class="tagline">مكتبتك المجانية في جيبك</p>
+  <form class="search" id="searchForm" role="search">
+    <input id="q" type="search" placeholder="ابحث بعنوان الكتاب أو المؤلف" aria-label="بحث عن كتاب" enterkeyhint="search">
+    <button type="submit">بحث</button>
+  </form>
+</header>
+
+<div class="filters lang-row" id="langRow" role="group" aria-label="اللغة">
+  <button class="chip" data-lang="" aria-pressed="true">كل اللغات</button>
+  <button class="chip" data-lang="ar" aria-pressed="false">العربية</button>
+  <button class="chip" data-lang="en" aria-pressed="false">English</button>
+</div>
+<div class="filters" id="suggestions" aria-label="اقتراحات"></div>
+
+<h2 class="section" id="sectionTitle">الأكثر تحميلاً</h2>
+<main>
+  <div id="grid"></div>
+  <div id="status" class="status" hidden></div>
+  <div class="more-wrap"><button id="more" class="btn ghost" hidden>عرض المزيد</button></div>
+</main>
+
+<dialog id="legal">
+  <h3>هذا الكتاب غير متاح للتحميل المجاني</h3>
+  <p>هذا الكتاب محمي بحقوق النشر أو لا تتوفر له نسخة مجانية مرخّصة، لذلك لا يمكن تحميله من هنا.</p>
+  <p style="margin-top:8px">يمكنك الحصول عليه بطرق قانونية:</p>
+  <ul>
+    <li>شراؤه من المتاجر الإلكترونية الرسمية أو من موقع الناشر.</li>
+    <li>استعارته من مكتبة عامة أو جامعية، فكثير منها يوفّر الإعارة الرقمية.</li>
+    <li>البحث عن نسخة مرخّصة بشكل مفتوح، أو مراسلة الناشر أو المؤلف.</li>
+  </ul>
+  <p>وبذلك تدعم المؤلفين وتحافظ على حقوقهم.</p>
+  <form method="dialog"><button class="btn primary">حسناً</button></form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
